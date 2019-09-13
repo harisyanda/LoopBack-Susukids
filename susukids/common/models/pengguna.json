@@ -1,0 +1,158 @@
+{
+    "name": "Pengguna",
+    "options": {
+      "idInjection": true,
+      "mysql": {
+        "schema": "loopback-example-mysqql",
+        "table": "pengguna"
+      }
+    },
+  
+    "properties": {
+        "id": {
+            "type": "Number",
+            "required": true,
+            "length": 5,
+            "precision": 5,
+            "id": 5,
+            "scale": 0,
+            "mysql": {
+                "columnName": "id",
+                "dataType": "int",
+                "dataLength": 5,
+                "dataPrecision": 5,
+                "dataScale": 0,
+                "nullable": "N"
+            }
+            },
+      "nama_lengkap": {
+        "type": "String",
+        "required": true,
+        "length": 100,
+        "precision": 10,
+        "scale": 0,
+        
+        "mysql": {
+            "columnName": "nama_lengkap",
+            "dataType": "varchar",
+            "dataLength": 100,
+            "dataPrecision": 10,
+            "dataScale": 0,
+            "nullable": "N"
+        }
+      },
+      "email": {
+        "type": "String",
+        "required": true,
+        "length": 100,
+        "precision": 10,
+        "scale": 0,
+        
+        "mysql": {
+            "columnName": "email",
+            "dataType": "varchar",
+            "dataLength": 100,
+            "dataPrecision": 10,
+            "dataScale": 0,
+            "nullable": "N"
+        }
+      },
+      "no_telepon": {
+        "type": "String",
+        "required": true,
+        "length": 12,
+        "precision": 12,
+        "scale": 0,
+        
+        "mysql": {
+            "columnName": "no_telepon",
+            "dataType": "varchar",
+            "dataLength": 12,
+            "dataPrecision": 12,
+            "dataScale": 0,
+            "nullable": "N"
+        }
+      },
+      "alamat": {
+        "type": "String",
+        "required": true,
+        "length": 100,
+        "precision": 10,
+        "scale": 0,
+        
+        "mysql": {
+            "columnName": "alamat",
+            "dataType": "varchar",
+            "dataLength": 100,
+            "dataPrecision": 10,
+            "dataScale": 0,
+            "nullable": "N"
+        }
+      },
+      "role": {
+        "type": "String",
+        "required": true,
+        "length": 100,
+        "precision": 10,
+        "scale": 0,
+        
+        "mysql": {
+            "columnName": "role",
+            "dataType": "varchar",
+            "dataLength": 100,
+            "dataPrecision": 10,
+            "dataScale": 0,
+            "nullable": "N"
+        }
+      },
+      "password": {
+        "type": "String",
+        "required": true,
+        "length": 100,
+        "precision": 10,
+        "scale": 0,
+        
+        "mysql": {
+            "columnName": "password",
+            "dataType": "varchar",
+            "dataLength": 100,
+            "dataPrecision": 10,
+            "dataScale": 0,
+            "nullable": "N"
+        }
+      },
+      "konfirm_password": {
+        "type": "String",
+        "required": true,
+        "length": 100,
+        "precision": 10,
+        "scale": 0,
+        
+        "mysql": {
+            "columnName": "konfirm_password",
+            "dataType": "varchar",
+            "dataLength": 100,
+            "dataPrecision": 10,
+            "dataScale": 0,
+            "nullable": "N"
+        }
+    }
+  },
+  
+  "validations": [],
+  "relations": {
+    "commodity" : {
+      "type" : "hasMany",
+      "model" : "Commodity",
+      "foreignKey" : "commodityId"
+    }
+  },
+  "acls": [ {
+    "accessType" : "EXECUTE",
+    "principalType" : "ROLE",
+    "principalId" : "$everyone",
+    "permission" : "ALLOW",
+    "property" : "getUsersByUsername"
+  }],
+  "methods": {}
+}

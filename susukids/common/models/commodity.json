@@ -1,0 +1,61 @@
+{
+  "name": "Commodity",
+  "plural": "Commodity",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nama_kategori": {
+      "type": "string",
+      "required": true
+    },
+    "kategori": {
+      "type": "string"
+    },
+    "merk": {
+      "type": "string"
+    },
+    "berat": {
+      "type": "string",
+      "required": true
+    },
+    "stok": {
+      "type": "number"
+    },
+    "image_produk": {
+      "type": "string",
+      "required": false
+    },
+    "deskripsi": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "createdAt": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "updatedAt": {
+      "type": "date",
+      "defaultFn": "now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "transaction" : {
+      "type" : "belongsTo",
+      "model" : "Transaction",
+      "foreignKey" : "transactionId"
+ },
+    "pengguna" : {
+      "type" : "belongsTo",
+      "model" : "Pengguna",
+      "foreignKey" : "penggunaId"
+}
+},
+  "acls": [],
+  "methods": {}
+}

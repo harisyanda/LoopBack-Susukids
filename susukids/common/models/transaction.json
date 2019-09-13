@@ -1,0 +1,44 @@
+{
+  "name": "Transaction",
+  "plural": "Transaction",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "jml_qty": {
+      "type": "number"
+    },
+    "sub_harga": {
+      "type": "number"
+    },
+    "total_harga": {
+      "type": "number"
+    },
+    "metode_pembayaran": {
+      "type": "string"
+    }, 
+    "status_pembayaran": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "date",
+      "defaultFn" : "now"
+    },  
+    "updatedAt": {
+      "type": "date",
+      "defaultFn" : "now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "commodity" : {
+      "type" : "hasMany",
+      "model" : "Commodity",
+      "foreignKey" : "commodityId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

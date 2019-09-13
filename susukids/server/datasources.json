@@ -1,0 +1,22 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mysql": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "susukids",
+    "username": "root",
+    "password": "censored705",
+    "name": "mysql",
+    "connector":"mysql"
+  },
+  "mongodb": {
+    "database": "susukids",
+    "name": "mongodb",
+    "connector": "mongodb",
+    "extended_operators": true,
+    "allowExtendedOperators": true
+  }
+}
